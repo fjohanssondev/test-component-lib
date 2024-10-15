@@ -1,8 +1,18 @@
-import { useState } from "react"
+import React, { useEffect } from "react"
 
 const Input = () => {
-  const [state, setState] = useState('test')
-  return <input type="text" placeholder={state} />
+  console.log("Mounted")
+  const [state, setState] = React.useState('test')
+
+  useEffect(() => {
+    console.log("State changed")
+  }, [state])
+  return (
+    <>
+    <button onClick={() => setState("Something else")}>Change</button>
+    <input key={state} type="text" placeholder={state} />
+    </>
+  )
 }
 
-export default Input
+export default Input  

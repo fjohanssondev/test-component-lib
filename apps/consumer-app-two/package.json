@@ -28,5 +28,8 @@
     "plugins": [
       "autoprefixer"
     ]
+  },
+  "devDependencies": {
+    "@sitevision/babel-preset-react-server": "^1.0.5"
   }
 }

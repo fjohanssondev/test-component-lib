@@ -10,6 +10,7 @@ export interface AppProperties {
 const App: React.FunctionComponent<AppProperties> = ({ message, name }) => {
   return (
     <div className={styles.container}>
+      <p>Test</p>
       <Input />
     </div>
   );
